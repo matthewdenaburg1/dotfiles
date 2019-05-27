@@ -6,33 +6,53 @@ is_osx || return 1
 
 # Homebrew recipes
 recipes=(
-  ansible
-  awscli
+  align
+  ant
   bash
-  cmatrix
+  bash-completion@2
+  bat
+  catimg
   coreutils
-  cowsay
+  csv-fix
+  curl
+  diff-pdf
+  diff-so-fancy
+  findutils
+  gawk
+  gcal
+  gcc
+  gettext
   git
-  git-extras
-  htop-osx
-  hub
-  id3tool
-  jq
+  glib
+  gnu-sed
+  gnu-time
+  go
+  googler
+  grep
+  highlight
+  hr
+  lastpass-cli
+  less
   lesspipe
-  man2html
-  mercurial
-  nmap
-  postgresql
-  reattach-to-user-namespace
-  sl
-  ssh-copy-id
-  terminal-notifier
-  the_silver_searcher
+  mysql
+  newsboat
+  p7zip
+  pdfgrep
+  perl
+  pinentry
+  python
+  readline
+  remind
+  rename
+  rmlint
+  sqlite
   thefuck
-  tmux
-  tmux-xpanes
-  tree
+  todo-txt
+  trash
+  vim
   wget
+  whois
+  wtf
 )
 
 brew_install_recipes
@@ -41,13 +61,6 @@ brew_install_recipes
 
 # This is where brew stores its binary symlinks
 local binroot="$(brew --config | awk '/HOMEBREW_PREFIX/ {print $2}')"/bin
-
-# htop
-if [[ "$(type -P $binroot/htop)" ]] && [[ "$(stat -L -f "%Su:%Sg" "$binroot/htop")" != "root:wheel" || ! "$(($(stat -L -f "%DMp" "$binroot/htop") & 4))" ]]; then
-  e_header "Updating htop permissions"
-  sudo chown root:wheel "$binroot/htop"
-  sudo chmod u+s "$binroot/htop"
-fi
 
 # bash
 if [[ "$(type -P $binroot/bash)" && "$(cat /etc/shells | grep -q "$binroot/bash")" ]]; then

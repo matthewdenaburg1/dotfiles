@@ -6,10 +6,12 @@ for pip_cmd in pip2 pip FAIL; do [[ "$(which $pip_cmd)" ]] && break; done
 
 # Add pip packages
 pip_packages=(
-  netifaces
-  powerline-status
-  psutil
-  tmuxp
+  beautifulsoup4
+  bs4
+  gmpy
+  pylint
+  python-dateutil
+  requests
 )
 
 installed_pip_packages="$($pip_cmd list 2>/dev/null | awk '{print $1}')"

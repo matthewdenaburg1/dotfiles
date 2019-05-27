@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+"""
+File Name:	Problem<NUMBER0>.py
+Date started:	
+Date solved:	
+Run Time:	_ seconds
+
+"""
+
+import project_euler
+
+PROBLEM_NUMBER = <NUMBER>
+SOLVED = 0
+
+
+def problem<NUMBER0>(input_=None):
+    pass
+
+
+def run():
+    print(project_euler.print_timing(problem<NUMBER0>))
+
+
+if __name__ == "__main__":
+    run()

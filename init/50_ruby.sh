@@ -1,3 +1,5 @@
+exit 0
+
 # Initialize rbenv.
 source $DOTFILES/source/50_ruby.sh
 

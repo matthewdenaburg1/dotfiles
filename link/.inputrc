@@ -9,3 +9,8 @@ set keymap vi-insert
 # Up/down arrows search history
 "\e[A": history-search-backward
 "\e[B": history-search-forward
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+
+# set completion-ignore-case on
+
