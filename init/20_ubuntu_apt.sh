@@ -25,13 +25,10 @@ function add_ppa() {
 
 # Misc.
 apt_packages+=(
-  awscli
   build-essential
   cmatrix
   cowsay
   curl
-  docker.io
-  docker-compose
   git-core
   groff
   hollywood
@@ -41,6 +38,7 @@ apt_packages+=(
   jq
   mercurial
   nmap
+  p7zip-full
   postgresql
   python-pip
   silversearcher-ag
@@ -72,9 +70,9 @@ apt_packages+=(
   libncurses5-dev libffi-dev libgdbm3 libgdbm-dev zlib1g-dev
 )
 
-# https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-16-04
-add_ppa ppa:ansible/ansible
-apt_packages+=(ansible)
+# # https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-16-04
+# add_ppa ppa:ansible/ansible
+# apt_packages+=(ansible)
 
 # http://tipsonubuntu.com/2016/09/13/vim-8-0-released-install-ubuntu-16-04/
 add_ppa ppa:jonathonf/vim
