@@ -17,6 +17,8 @@ Plugin 'tpope/vim-surround'     " mappings to wrap text with quotes, etc.
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-sensible'
 
+Plugin 'nathanaelkane/vim-indent-guides'
+
 Plugin 'vim-syntastic/syntastic'
 
 Plugin 'Valloric/YouCompleteMe' " code completion
@@ -26,17 +28,18 @@ call vundle#end()
 " }}}
 
 colorscheme blackboard
+filetype plugin indent on
+syntax enable
 
 let mapleader = ","
 let maplocalleader = "."
-
-filetype plugin indent on
-syntax enable
 
 " autocompletion {{{
 " YouCompleteMe
 let g:ycm_python_binary_path = '/usr/local/bin/python3'
 let g:ycm_filepath_completion_use_working_dir = 1
+let g:indent_guides_enable_on_vim_startup = 1
+
 
 " jedi
 let g:jedi#use_splits_not_buffers = "left"
