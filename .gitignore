@@ -15,6 +15,9 @@
 /link/.rbenv/versions/
 /link/.rbenv/version
 
+# don't commit vim plugins.
+/link/.vim/bundle
+
 # Don't commit tmux plugins, tpm will install them.
 /link/.tmux/plugins
 
