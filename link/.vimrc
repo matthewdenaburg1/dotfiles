@@ -9,8 +9,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'   " Vim Package Manager
 
-Plugin 'fenetikm/falcon'        " colorscheme stuff
-
 Plugin 'PProvost/vim-ps1'       " PowerShell plugin
 
 Plugin 'tpope/vim-commentary'   " provides comment mappings for code
@@ -26,6 +24,8 @@ Plugin 'davidhalter/jedi-vim'   " python 3 code completion
 
 call vundle#end()
 " }}}
+
+colorscheme blackboard
 
 let mapleader = ","
 let maplocalleader = "."
