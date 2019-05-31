@@ -26,6 +26,7 @@ function add_ppa() {
 # Misc.
 apt_packages+=(
   build-essential
+  cmake
   cmatrix
   cowsay
   curl
