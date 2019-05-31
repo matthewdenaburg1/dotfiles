@@ -18,6 +18,7 @@
 # don't commit vim plugins.
 /link/.vim/bundle
 
+/link/.vim/.netrwhist
 # Don't commit tmux plugins, tpm will install them.
 /link/.tmux/plugins
 
