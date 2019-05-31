@@ -41,6 +41,7 @@ apt_packages+=(
   p7zip-full
   postgresql
   python-pip
+  python3-dev
   silversearcher-ag
   sl
   telnet
