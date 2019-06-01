@@ -4,13 +4,13 @@ export EDITOR=vim
 
 # If mvim is installed, use it instead of native vim
 if [[ "$(which mvim)" ]]; then
-    EDITOR="mvim -v"
+    EDITOR="vim -v"
     alias vim="$EDITOR"
 fi
 
 if [[ ! "$SSH_TTY" ]]; then
   if [[ ! "$TMUX" ]]; then
-    is_osx && EDITOR=mvim || EDITOR=gvim
+    is_osx && EDITOR=vim || EDITOR=gvim
   fi
   export LESSEDIT="$EDITOR ?lm+%lm -- %f"
   export GIT_EDITOR="$EDITOR -f"
