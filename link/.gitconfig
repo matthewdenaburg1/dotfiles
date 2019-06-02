@@ -1,6 +1,5 @@
-[user]
-  name = Matthew Denaburg
-  email = EMAIL
+[include]
+  path = ~/.gitconfig.inc
 [core]
   autocrlf = input
   whitespace = fix,space-before-tab,tab-in-indent,trailing-space
