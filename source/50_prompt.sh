@@ -116,7 +116,15 @@ function __prompt_command() {
 
   __prompt_get_colors
   # http://twitter.com/cowboy/status/150254030654939137
-  PS1="\n"
+
+  PS1=""
+
+  # date: [HH:MM:SS]
+  PS1="$PS1$c1[$c0$(date +"%I$c1:$c0%M %p")$c1]$c9"
+
+  # path: [user@host:path]
+  PS1="$PS1$c1[$c0\u$c1:$c0\w$c1]$c9"
+
   __prompt_vcs_info=()
   # git: [branch:flags]
   __prompt_git || \
@@ -138,16 +146,13 @@ function __prompt_command() {
     done
     PS1="$PS1$c1]$c9"
   fi
+
   # misc: [cmd#:hist#]
   # PS1="$PS1$c1[$c0#\#$c1:$c0!\!$c1]$c9"
-  # path: [user@host:path]
-  # PS1="$PS1$c1[$c0\u$c1@$c0\h$c1:$c0\w$c1]$c9"
-  PS1="$PS1$c1[$c0\u$c1:$c0\w$c1]$c9"
-  PS1="$PS1\n"
-  # date: [HH:MM:SS]
-  PS1="$PS1$c1[$c0$(date +"%H$c1:$c0%M$c1:$c0%S")$c1]$c9"
+
   # exit code: 127
   PS1="$PS1$(__prompt_exit_code "$exit_code")"
+
   PS1="$PS1 \$ "
 }
 
