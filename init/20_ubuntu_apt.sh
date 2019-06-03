@@ -40,6 +40,7 @@ apt_packages+=(
   mercurial
   nmap
   p7zip-full
+  poppler-utils
   postgresql
   python-pip
   python3-dev
