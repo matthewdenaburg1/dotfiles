@@ -6,9 +6,9 @@ is_osx || return 1
 
 # Ensure the cask kegs are installed.
 kegs=(
-    caskroom/cask
-    caskroom/drivers
-    caskroom/fonts
+    homebrew/cask
+    homebrew/cask-drivers
+    homebrew/cask-fonts
 )
 brew_tap_kegs
 
@@ -49,7 +49,7 @@ casks=(
     vlc
     xquartz
     xscreensaver
-    zoom
+    zoomus
     # Quick Look plugins
     qlcolorcode
     qlmarkdown
@@ -61,7 +61,6 @@ casks=(
     webpquicklook
     # Color pickers
     colorpicker-developer
-    colorpicker-skalacolor
 )
 
 cask_flags=(
@@ -72,7 +71,7 @@ cask_flags=(
     --colorPickerdir=~/Library/ColorPickers
     --prefpanedir=~/Library/PreferencePanes
     --qlplugindir=~/Library/QuickLook
-    --screen_saverdir=~/Library/Screen\ Savers
+    --screen_saverdir=~/Library/Screen Savers
 )
 
 
