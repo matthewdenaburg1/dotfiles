@@ -6,9 +6,9 @@ is_osx || return 1
 
 # Ensure the cask kegs are installed.
 kegs=(
-  caskroom/cask
-  caskroom/drivers
-  caskroom/fonts
+    caskroom/cask
+    caskroom/drivers
+    caskroom/fonts
 )
 brew_tap_kegs
 
@@ -17,79 +17,88 @@ brew cask info this-is-somewhat-annoying 2>/dev/null
 
 # Homebrew casks
 casks=(
-  # Applications
-  alfred
-  bettertouchtool
-  db-browser-for-sqlite
-  discord
-  dropbox
-  eclipse-ide
-  firefox
-  flip4mac
-  geektool
-  github
-  google-backup-and-sync
-  google-chrome
-  gyazo
-  istat-menus
-  iterm2
-  jing
-  joinme
-  kindle
-  microsoft-office
-  minecraft
-  musicmanager
-  onedrive
-  puush
-  puzzles
-  runescape
-  skype
-  steam
-  teamviewer
-  virtualbox
-  vlc
-  xquartz
-  xscreensaver
-  zoom
-  # Quick Look plugins
-  betterzipql
-  qlcolorcode
-  qlmarkdown
-  qlprettypatch
-  qlstephen
-  quicklook-csv
-  quicklook-json
-  quicknfo
-  suspicious-package
-  webpquicklook
-  # Color pickers
-  colorpicker-developer
-  colorpicker-skalacolor
+    # Applications
+    alfred
+    db-browser-for-sqlite
+    discord
+    dropbox
+    eclipse-ide
+    firefox
+    flip4mac
+    geektool
+    github
+    google-backup-and-sync
+    google-chrome
+    gyazo
+    istat-menus
+    iterm2
+    jing
+    joinme
+    kindle
+    microsoft-office
+    minecraft
+    music-manager
+    onedrive
+    puush
+    puzzles
+    runescape
+    skype
+    steam
+    teamviewer
+    virtualbox
+    vlc
+    xquartz
+    xscreensaver
+    zoom
+    # Quick Look plugins
+    qlcolorcode
+    qlmarkdown
+    qlprettypatch
+    qlstephen
+    quicklook-csv
+    quicklook-json
+    quicknfo
+    webpquicklook
+    # Color pickers
+    colorpicker-developer
+    colorpicker-skalacolor
 )
+
+cask_flags=(
+    --no-binaries
+    --appdir=/Applications
+    --fontdir=~/Library/Fonts
+    --servicedir=~/Library/Services
+    --colorPickerdir=~/Library/ColorPickers
+    --prefpanedir=~/Library/PreferencePanes
+    --qlplugindir=~/Library/QuickLook
+    --screen_saverdir=~/Library/Screen\ Savers
+)
+
 
 # Install Homebrew casks.
 casks=($(setdiff "${casks[*]}" "$(brew cask list 2>/dev/null)"))
 if (( ${#casks[@]} > 0 )); then
-  e_header "Installing Homebrew casks: ${casks[*]}"
-  for cask in "${casks[@]}"; do
-    brew cask install $cask
-  done
-  brew cask cleanup
+    e_header "Installing Homebrew casks: ${casks[*]}"
+    for cask in "${casks[@]}"; do
+        brew cask install $cask "${cask_flags[@]}"
+    done
+    # brew cask cleanup
 fi
 
 # Work around colorPicker symlink issue.
 # https://github.com/caskroom/homebrew-cask/issues/7004
 cps=()
 for f in ~/Library/ColorPickers/*.colorPicker; do
-  [[ -L "$f" ]] && cps=("${cps[@]}" "$f")
+    [[ -L "$f" ]] && cps=("${cps[@]}" "$f")
 done
 
 if (( ${#cps[@]} > 0 )); then
-  e_header "Fixing colorPicker symlinks"
-  for f in "${cps[@]}"; do
-    target="$(readlink "$f")"
-    e_arrow "$(basename "$f")"
-    rm "$f"
-    cp -R "$target" ~/Library/ColorPickers/
-  done
+    e_header "Fixing colorPicker symlinks"
+    for f in "${cps[@]}"; do
+        target="$(readlink "$f")"
+        e_arrow "$(basename "$f")"
+        rm "$f"
+        cp -R "$target" ~/Library/ColorPickers/
+    done
 fi
