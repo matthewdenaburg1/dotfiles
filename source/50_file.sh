@@ -8,11 +8,13 @@ if is_osx; then
     if [[ "$(type -P gls)" ]]; then
         # if we have gnu's coreutil
         alias ls="command gls --color"
+        alias la="command gls --color -A"
     else
-        alias ls="command ls -G"
+        alias ls="command ls -G -A"
     fi
 else
     alias ls="command ls --color"
+    alias la="command ls --color -A"
 fi
 if [[ "$(type -P gdircolors)" ]]; then
     eval "$(gdircolors -b ~/.dircolors)"
@@ -22,7 +24,7 @@ fi
 
 # Directory listing
 if [[ "$(type -P tree)" ]]; then
-    alias ll='tree --dirsfirst -aLpughDFiC 1'
+    alias ll='tree --dirsfirst -apughDFiC -L 1'
     alias lsd='ll -d'
 else
     alias la='ls -A'
