@@ -50,6 +50,7 @@ recipes=(
   tmux
   todo-txt
   trash
+  tree
   vim
   wget
   whois
