@@ -47,6 +47,7 @@ recipes=(
   rmlint
   sqlite
   thefuck
+  tmux
   todo-txt
   trash
   vim
