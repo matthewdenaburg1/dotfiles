@@ -49,6 +49,7 @@ apt_packages+=(
   sl
   telnet
   thefuck
+  tmux
   tree
 )
 
