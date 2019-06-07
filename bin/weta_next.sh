@@ -50,15 +50,15 @@ while getopts ':hp:n:' opt ; do
 	p)  # previous NUM songs
 	    previous="$(echo ${OPTARG} | tr --complement --delete '[0-9]')"
 	    if test -z "${previous}" ; then
-		echo "Invalid argument provided to -${OPTARG}." >&2
-		usage && exit 1
+            echo "Invalid argument provided to -${OPTARG}." >&2
+            usage && exit 1
 	    fi
 	    ;;
 	n)  # next NUM songs
 	    next="$(echo ${OPTARG} | tr --complement --delete '[0-9]')"
 	    if test -z "${next}" ; then
-		echo "Invalid argument provided to -${OPTARG}." >&2
-		usage && exit 1
+            echo "Invalid argument provided to -${OPTARG}." >&2
+            usage && exit 1
 	    fi
 	    ;;
 	a)
@@ -91,7 +91,7 @@ id_save="$(jot -s '|' ${number} $((current_id - previous)))"
 
 # download the page
 curl --no-keepalive --no-sessionid --silent "${URL2}" | \
-    # convert entities
+    # remove html entities
     hxunent | \
     # remove leading spaces
     sed -E 's/^[[:space:]]*//' | \
@@ -110,5 +110,6 @@ curl --no-keepalive --no-sessionid --silent "${URL2}" | \
     sed -n -E '/(1[012]|[1-9]):([0-5][0-9]) [ap]m/,+2p' |\
     # join into 3 columns
     paste -d "\t" - - - | \
+    # align into even columns https://unix.stackexchange.com/a/503519
     column -t -s $'\t'
 
