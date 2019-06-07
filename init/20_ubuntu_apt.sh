@@ -25,6 +25,7 @@ function add_ppa() {
 
 # Misc.
 apt_packages+=(
+  athena-jot
   build-essential
   cmake
   cmatrix
@@ -33,6 +34,7 @@ apt_packages+=(
   git-core
   groff
   hollywood
+  html-xml-utils
   htop
   id3tool
   imagemagick
