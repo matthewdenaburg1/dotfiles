@@ -110,5 +110,5 @@ curl --no-keepalive --no-sessionid --silent "${URL2}" | \
     sed -n -E '/(1[012]|[1-9]):([0-5][0-9]) [ap]m/,+2p' |\
     # join into 3 columns
     paste -d "\t" - - - | \
-    align -j t
+    column -t -s $'\t'
 
