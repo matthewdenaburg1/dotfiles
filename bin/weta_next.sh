@@ -92,7 +92,7 @@ id_save="$(jot -s '|' ${number} $((current_id - previous)))"
 # download the page
 curl --no-keepalive --no-sessionid --silent "${URL2}" | \
     # convert entities
-    /usr/local/bin/hxunent | \
+    hxunent | \
     # remove leading spaces
     sed -E 's/^[[:space:]]*//' | \
     # keep only songs
