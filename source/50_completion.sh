@@ -9,6 +9,7 @@ if is_osx; then
     completions+=(
         $COMPLETION_LOC/git-completion.bash
         $COMPLETION_LOC/brew
+        $COMPLETION_LOC/tmux
     )
     # googler
     if [[ "$(type -P googler)" ]]; then
