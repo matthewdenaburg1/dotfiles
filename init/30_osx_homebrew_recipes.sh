@@ -42,6 +42,7 @@ recipes=(
   pinentry
   python
   readline
+  reattach-to-user-namespace
   remind
   rename
   rmlint
