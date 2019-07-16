@@ -27,7 +27,6 @@ Plugin 'davidhalter/jedi-vim'   " python 3 code completion
 call vundle#end()
 " }}}
 
-colorscheme blackboard
 filetype plugin indent on
 syntax enable
 
