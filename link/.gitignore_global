@@ -58,3 +58,5 @@ Desktop.ini
 .swo
 .*.swp
 .*.swo
+
+__pycache__/
