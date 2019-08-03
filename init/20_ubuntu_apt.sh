@@ -29,11 +29,9 @@ apt_packages+=(
   build-essential
   cmake
   cmatrix
-  cowsay
   curl
   git-core
   groff
-  hollywood
   html-xml-utils
   htop
   id3tool
@@ -48,7 +46,6 @@ apt_packages+=(
   python-pip
   python3-dev
   silversearcher-ag
-  sl
   telnet
   thefuck
   tmux
