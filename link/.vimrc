@@ -22,7 +22,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vim-syntastic/syntastic'
 
 Plugin 'Valloric/YouCompleteMe' " code completion
-Plugin 'davidhalter/jedi-vim'   " python 3 code completion
+" Plugin 'davidhalter/jedi-vim'   " python 3 code completion
 
 call vundle#end()
 " }}}
