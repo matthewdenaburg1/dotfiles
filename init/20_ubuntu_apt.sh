@@ -44,25 +44,27 @@ apt_packages+=(
   poppler-utils
   postgresql
   python-pip
+  python3
   python3-dev
   silversearcher-ag
   telnet
   thefuck
   tmux
   tree
+  vim
 )
 
-apt_packages+=(vim)
-is_ubuntu_desktop && apt_packages+=(vim-gnome)
+# apt_packages+=(vim)
+# is_ubuntu_desktop && apt_packages+=(vim-gnome)
 
-# https://github.com/neovim/neovim/wiki/Installing-Neovim
-add_ppa ppa:neovim-ppa/stable
-apt_packages+=(neovim)
+# # https://github.com/neovim/neovim/wiki/Installing-Neovim
+# add_ppa ppa:neovim-ppa/stable
+# apt_packages+=(neovim)
 
-# https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases
-add_ppa ppa:stebbins/handbrake-releases
-apt_packages+=(handbrake-cli)
-is_ubuntu_desktop && apt_packages+=(handbrake-gtk)
+# # https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases
+# add_ppa ppa:stebbins/handbrake-releases
+# apt_packages+=(handbrake-cli)
+# is_ubuntu_desktop && apt_packages+=(handbrake-gtk)
 
 # # https://github.com/rvm/ubuntu_rvm
 # add_ppa ppa:rael-gc/rvm
@@ -78,16 +80,16 @@ is_ubuntu_desktop && apt_packages+=(handbrake-gtk)
 # add_ppa ppa:ansible/ansible
 # apt_packages+=(ansible)
 
-# http://tipsonubuntu.com/2016/09/13/vim-8-0-released-install-ubuntu-16-04/
-add_ppa ppa:jonathonf/vim
-apt_packages+=(vim)
+# # http://tipsonubuntu.com/2016/09/13/vim-8-0-released-install-ubuntu-16-04/
+# add_ppa ppa:jonathonf/vim
+# apt_packages+=(vim)
 
-# https://launchpad.net/~hnakamur/+archive/ubuntu/tmux
-add_ppa ppa:hnakamur/tmux
+# # https://launchpad.net/~hnakamur/+archive/ubuntu/tmux
+# add_ppa ppa:hnakamur/tmux
 
-# https://github.com/greymd/tmux-xpanes
-add_ppa ppa:greymd/tmux-xpanes
-apt_packages+=(tmux-xpanes)
+# # https://github.com/greymd/tmux-xpanes
+# add_ppa ppa:greymd/tmux-xpanes
+# apt_packages+=(tmux-xpanes)
 
 if is_ubuntu_desktop; then
   # http://www.omgubuntu.co.uk/2016/06/install-latest-arc-gtk-theme-ubuntu-16-04
