@@ -31,6 +31,7 @@ apt_packages+=(
   cmatrix
   curl
   git-core
+  googler
   groff
   html-xml-utils
   htop

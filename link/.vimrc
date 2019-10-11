@@ -12,7 +12,6 @@ Plugin 'VundleVim/Vundle.vim'   " Vim Package Manager
 Plugin 'PProvost/vim-ps1'       " PowerShell plugin
 
 Plugin 'tpope/vim-commentary'   " provides comment mappings for code
-Plugin 'tpope/vim-liquid'       " liquid syntax highlighting
 Plugin 'tpope/vim-surround'     " mappings to wrap text with quotes, etc.
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-sensible'
@@ -37,7 +36,7 @@ let maplocalleader = "."
 " YouCompleteMe
 let g:ycm_python_binary_path = '/usr/local/bin/python3'
 let g:ycm_filepath_completion_use_working_dir = 1
-let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_enable_on_vim_startup = 0
 
 
 " jedi
