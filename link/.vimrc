@@ -2,7 +2,7 @@
 set nocompatible
 filetype off
 
-" Vim plugins ("Vundle") {{{
+" Vim plugins ("Vundle") {{{1
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
@@ -21,34 +21,33 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vim-syntastic/syntastic'
 
 Plugin 'Valloric/YouCompleteMe' " code completion
-" Plugin 'davidhalter/jedi-vim'   " python 3 code completion
 
 call vundle#end()
-" }}}
 
-filetype plugin indent on
-syntax enable
-
-let mapleader = ","
-let maplocalleader = "."
-
-" autocompletion {{{
+" plugin settings {{{2
 " YouCompleteMe
 let g:ycm_python_binary_path = '/usr/local/bin/python3'
 let g:ycm_filepath_completion_use_working_dir = 1
 let g:indent_guides_enable_on_vim_startup = 0
+" }}}2
+" }}}1
 
+filetype plugin indent on
+syntax enable
 
-" jedi
-let g:jedi#use_splits_not_buffers = "left"
-let g:jedi#completions_command = '<C-N>'
-" }}}
+colorscheme blackboard
+set background=dark
+
+let mapleader = ","
+let maplocalleader = "."
+
 
 " basic settings {{{
 set number relativenumber
 set numberwidth=6
 set mouse=hn                    " Mouse in normal and help modes
 let &showbreak = '... '         " show '... ' on indented lines
+set belloff=all                 " turn alert bell off (src: https://stackoverflow.com/a/41524053/664950)
 " }}}
 
 " Basic mappings {{{
