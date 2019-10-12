@@ -4,7 +4,7 @@
   autocrlf = input
   whitespace = fix,space-before-tab,tab-in-indent,trailing-space
   excludesfile = ~/.gitignore_global
-  pager = diff-so-fancy | /usr/bin/env less --tabs=4 -RFX
+  pager = $DOTFILES/vendor/diff-so-fancy/diff-so-fancy | /usr/bin/env less --tabs=4 -RFX
 [apply]
   whitespace = fix
 [alias]
