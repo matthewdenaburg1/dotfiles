@@ -6,3 +6,5 @@
 
 # set completion-ignore-case on
 
+# disable beep. src: https://stackoverflow.com/a/36726662/664950
+set bell-style none
