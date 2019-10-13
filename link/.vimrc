@@ -28,6 +28,8 @@ call vundle#end()
 " YouCompleteMe
 let g:ycm_python_binary_path = '/usr/local/bin/python3'
 let g:ycm_filepath_completion_use_working_dir = 1
+
+" nathanaelkane/vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 0
 " }}}2
 " }}}1
