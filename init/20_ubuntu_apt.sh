@@ -39,6 +39,7 @@ apt_packages+=(
   imagemagick
   jq
   mercurial
+  mvn
   nmap
   p7zip-full
   pdfgrep
