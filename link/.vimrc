@@ -2,27 +2,33 @@
 set nocompatible
 filetype off
 
-" Vim plugins ("Vundle") {{{1
-set rtp+=~/.vim/bundle/Vundle.vim
+" Vim plugins ("vim-plug") {{{1
+call plug#begin('~/.vim/plugged/')
+Plug 'tpope/vim-commentary'   " provides comment mappings for code
+Plug 'tpope/vim-surround'     " mappings to wrap text with quotes, etc.
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-sensible'
 
-call vundle#begin()
+Plug 'PProvost/vim-ps1'       " PowerShell plugin
 
-Plugin 'VundleVim/Vundle.vim'   " Vim Package Manager
+Plug 'nathanaelkane/vim-indent-guides'
 
-Plugin 'PProvost/vim-ps1'       " PowerShell plugin
+Plug 'vim-syntastic/syntastic'
 
-Plugin 'tpope/vim-commentary'   " provides comment mappings for code
-Plugin 'tpope/vim-surround'     " mappings to wrap text with quotes, etc.
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-sensible'
+function! BuildYCM(info)
+	" info is a dictionary with 3 fields
+	" - name:   name of the plugin
+	" - status: 'installed', 'updated', or 'unchanged'
+	" - force:  set on PlugInstall! or PlugUpdate!
+	if a:info.status == 'installed' || a:info.force
+		!python3 install.py --java-completer --clangd-completer
+	endif
+endfunction
 
-Plugin 'nathanaelkane/vim-indent-guides'
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
-Plugin 'vim-syntastic/syntastic'
 
-Plugin 'Valloric/YouCompleteMe' " code completion
-
-call vundle#end()
+call plug#end()
 
 " plugin settings {{{2
 " YouCompleteMe
