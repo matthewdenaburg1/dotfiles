@@ -20,10 +20,16 @@ if is_osx; then
         completions+=($COMPLETION_LOC/todo_completion)
     fi
     # bash completion
-    if is_osx && [[ -d '/usr/local/share/bash-completion/bash_completion' ]]; then
+    if [[ -d '/usr/local/share/bash-completion/bash_completion' ]]; then
         completions+=(/usr/local/share/bash-completion/bash_completion)
     fi
     unset COMPLETION_LOC
+fi
+if is_ubuntu; then
+    # mvn - https://github.com/juven/maven-bash-completion
+    completions+=($DOTFILES/vendor/maven-bash-completion/bash_completion.bash)
+    # tmux - https://github.com/imomaliev/tmux-bash-completion
+    completions+=($DOTFILES/vendor/tmux-bash-completion/completions/tmux)
 fi
 
 if (( ${#completions[@]} > 0 )) ; then
