@@ -9,14 +9,16 @@
 
 # Don't commit Vim plugins, vim-plug will install them.
 /link/.vim/plugged
+# don't commit plug.vim
+/link/.vim/autoload/plug.vim
+
+# don't commit vim plugins, vundle will install them.
+/link/.vim/bundle
 
 # Don't commit rbenv temp files.
 /link/.rbenv/shims/
 /link/.rbenv/versions/
 /link/.rbenv/version
-
-# don't commit vim plugins.
-/link/.vim/bundle
 
 /link/.vim/.netrwhist
 # Don't commit tmux plugins, tpm will install them.
