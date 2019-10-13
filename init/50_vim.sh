@@ -3,8 +3,7 @@ mkdir -p $DOTFILES/caches/vim
 
 # Download Vim plugins.
 if [[ "$(type -P vim)" ]]; then
-    bundle="$DOTFILES/link/.vim/bundle/"
-    mkdir -p "$bundle"
-    [[ -d "$bundle/Vundle.vim/" ]] || git clone 'https://github.com/VundleVim/Vundle.vim/' "$bundle/Vundle.vim"
-    vim +PluginInstall +qall
+    curl --location --create-dirs --output $DOTFILES/link/.vim/autoload/plug.vim \
+        'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    mkdir -p $DOTFILES/link/.vim/plugged
 fi
