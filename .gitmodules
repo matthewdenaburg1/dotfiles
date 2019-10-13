@@ -7,3 +7,9 @@
 [submodule "diff-so-fancy"]
 	path = vendor/diff-so-fancy
 	url = https://github.com/so-fancy/diff-so-fancy.git
+[submodule "maven-bash-completion"]
+	path = vendor/maven-bash-completion
+	url = https://github.com/juven/maven-bash-completion
+[submodule "tmux-bash-completion"]
+	path = vendor/tmux-bash-completion
+	url = https://github.com/imomaliev/tmux-bash-completion
