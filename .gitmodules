@@ -13,3 +13,6 @@
 [submodule "tmux-bash-completion"]
 	path = vendor/tmux-bash-completion
 	url = https://github.com/imomaliev/tmux-bash-completion
+[submodule "vendor/vim-plug"]
+	path = vendor/vim-plug
+	url = https://github.com/junegunn/vim-plug.git
