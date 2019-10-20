@@ -54,6 +54,9 @@ apt_packages+=(
   tmux
   tree
   vim
+
+  zip
+  unzip
 )
 
 # apt_packages+=(vim)
