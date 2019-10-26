@@ -8,6 +8,7 @@ for pip_cmd in pip2 pip FAIL; do [[ "$(which $pip_cmd)" ]] && break; done
 pip_packages=(
   beautifulsoup4
   bs4
+  django
   gmpy
   pylint
   python-dateutil
