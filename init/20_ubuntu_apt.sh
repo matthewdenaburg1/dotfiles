@@ -45,9 +45,9 @@ apt_packages+=(
   pdfgrep
   poppler-utils
   postgresql
-  python-pip
   python3
   python3-dev
+  python3-pip
   silversearcher-ag
   telnet
   thefuck
