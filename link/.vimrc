@@ -31,19 +31,24 @@ Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 call plug#end()
 
 " plugin settings {{{2
-" YouCompleteMe
-let g:ycm_python_binary_path = '/usr/local/bin/python3'
+
+" vim-syntastic/syntastic: use python3 for syntax checking
+let g:syntastic_python_checkers = ['python3']
+
+" Valloric/YouCompleteMe
 let g:ycm_filepath_completion_use_working_dir = 1
 
 " nathanaelkane/vim-indent-guides
-let g:indent_guides_enable_on_vim_startup = 0
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+
 " }}}2
 " }}}1
 
 filetype plugin indent on
 syntax enable
 
-colorscheme blackboard
+colorscheme slate
 set background=dark
 
 let mapleader = ","
