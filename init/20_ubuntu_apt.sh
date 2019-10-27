@@ -25,38 +25,46 @@ function add_ppa() {
 
 # Misc.
 apt_packages+=(
-  athena-jot
-  build-essential
-  cmake
-  cmatrix
-  curl
-  git-core
-  googler
-  groff
-  html-xml-utils
-  htop
-  id3tool
-  imagemagick
-  jq
-  mercurial
-  mvn
-  nmap
-  p7zip-full
-  pdfgrep
-  poppler-utils
-  postgresql
-  python3
-  python3-dev
-  python3-pip
-  pylint3
-  telnet
-  thefuck
-  tmux
-  tree
-  vim
+    build-essentials
+    cmake
+    make
 
-  zip
-  unzip
+    g++
+    gcc
+    python3
+    python3-dev
+
+    python3-bs4
+    python3-dateutil
+    python3-django
+    python3-gmpy2
+    python3-pip         # python3 package installer
+    python3-requests
+    pylint3             # check python3 code against standards
+
+    athena-jot          # jot - print sequential or random data
+    curl
+    git
+    googler             # google search from command line
+    html-xml-utils
+    htop                # examine processes
+    jq                  # json processor
+    less
+    p7zip-full          # 7zip utility
+    telnet
+    thefuck             # suggest corrections for invalid bash commands
+    tree                # list files in a tree-like format
+    unzip               # unzip zip files
+    zip                 # create zip files
+
+    mvn                 # maven
+    tmux
+    vim
+
+    pdfgrep             # text search in pdfs
+    poppler-utils       # image utilities
+    groff
+    imagemagick
 )
 
 # apt_packages+=(vim)
