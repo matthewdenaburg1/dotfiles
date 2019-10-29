@@ -9,6 +9,8 @@ Plug 'tpope/vim-surround'     " mappings to wrap text with quotes, etc.
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-sensible'
 
+Plug 'tmux-plugins/vim-tmux'
+
 Plug 'PProvost/vim-ps1'       " PowerShell plugin
 
 Plug 'nathanaelkane/vim-indent-guides'
