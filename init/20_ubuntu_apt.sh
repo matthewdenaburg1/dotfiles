@@ -25,7 +25,7 @@ function add_ppa() {
 
 # Misc.
 apt_packages+=(
-    build-essentials
+    build-essential
     cmake
     make
 
