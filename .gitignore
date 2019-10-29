@@ -9,23 +9,25 @@
 
 # Don't commit Vim plugins, vim-plug will install them.
 /link/.vim/plugged
+# still don't commit vim plugins.
+/link/.vim/bundle
+# this is a symlink
+/link/.vim/autoload/plug.vim
+
 
 # Don't commit rbenv temp files.
 /link/.rbenv/shims/
 /link/.rbenv/versions/
 /link/.rbenv/version
 
-# don't commit vim plugins.
-/link/.vim/bundle
-
 /link/.vim/.netrwhist
 # Don't commit tmux plugins, tpm will install them.
 /link/.tmux/plugins
 # don't commit tmux resurrect files, either
 /link/.tmux/resurrect
+# or tmux sidebar
+/link/.tmux/sidebar
 
 # Ignore any file with LOCAL in the name (good for per-machine vars/functions)
 *LOCAL*
-
-/link/.vim/autoload/plug.vim
 
