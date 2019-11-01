@@ -17,6 +17,8 @@ Plug 'nathanaelkane/vim-indent-guides'
 
 Plug 'vim-syntastic/syntastic'
 
+Plug 'jeetsukumaran/vim-indentwise'
+
 function! BuildYCM(info)
 	" info is a dictionary with 3 fields
 	" - name:   name of the plugin
