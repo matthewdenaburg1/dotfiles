@@ -33,6 +33,9 @@ apt_packages+=(
     gcc
     python3
     python3-dev
+    java-common
+    default-jdk
+    default-jdk-doc
 
     python3-bs4
     python3-dateutil
@@ -57,13 +60,14 @@ apt_packages+=(
     unzip               # unzip zip files
     zip                 # create zip files
 
-    mvn                 # maven
+    maven               # maven
     tmux
     vim
+    newsboat
 
-    pdfgrep             # text search in pdfs
-    poppler-utils       # image utilities
     groff
+    poppler-utils       # image utilities
+    pdfgrep             # text search in pdfs
     imagemagick
 )
 
