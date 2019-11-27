@@ -28,6 +28,8 @@
 # or tmux sidebar
 /link/.tmux/sidebar
 
+/link/.newsboat/history.*
+
 # Ignore any file with LOCAL in the name (good for per-machine vars/functions)
 *LOCAL*
 

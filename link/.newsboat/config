@@ -1,0 +1,6 @@
+prepopulate-query-feeds yes
+cache-file ~/.cache/newsboat/cache.db
+# cleanup-on-quit	yes
+# max-items 500
+# browser "lynx -accept_all_cookies"
+# datetime-format "%Y-%m-%d"
