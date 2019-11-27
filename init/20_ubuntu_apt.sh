@@ -32,26 +32,27 @@ apt_packages+=(
     g++
     gcc
     python3
-    python3-dev
+    python3-dev         # python3 header files
     java-common
-    default-jdk
-    default-jdk-doc
+    default-jdk         # standard jdk
+    default-jdk-doc     # standard jdk documentation
 
-    python3-bs4
-    python3-dateutil
-    python3-django
-    python3-gmpy2
+    python3-bs4         # error-tolerant HTML parser
+    python3-dateutil    # extends python3 datetime module
+    python3-django      # python web dev framework
+    python3-gmpy2       # GMP for python
     python3-pip         # python3 package installer
-    python3-requests
+    python3-requests    # http request library
+    python3-tabulate    # pretty print tabular data
     pylint3             # check python3 code against standards
 
     athena-jot          # jot - print sequential or random data
     curl
     git
     googler             # google search from command line
-    html-xml-utils
+    html-xml-utils      # html/xml manipulation tools
     htop                # examine processes
-    jq                  # json processor
+    jq                  # command line json processor
     less
     p7zip-full          # 7zip utility
     telnet
@@ -63,7 +64,7 @@ apt_packages+=(
     maven               # maven
     tmux
     vim
-    newsboat
+    newsboat            # text mode rss reader
 
     groff
     poppler-utils       # image utilities
