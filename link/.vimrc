@@ -97,5 +97,3 @@ augroup split_right_to_term
 	autocmd FileType * command! Term :vertical rightbelow terminal
 augroup END
 " }}}
-
-" vim:set filetype=vim:
