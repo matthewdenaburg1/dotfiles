@@ -59,6 +59,7 @@ apt_packages+=(
     thefuck             # suggest corrections for invalid bash commands
     tree                # list files in a tree-like format
     unzip               # unzip zip files
+    whois
     zip                 # create zip files
 
     maven               # maven
