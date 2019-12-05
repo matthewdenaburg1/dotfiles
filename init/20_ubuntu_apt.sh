@@ -38,7 +38,6 @@ apt_packages+=(
     default-jdk-doc     # standard jdk documentation
 
     python3-bs4         # error-tolerant HTML parser
-    python3-dateutil    # extends python3 datetime module
     python3-django      # python web dev framework
     python3-gmpy2       # GMP for python
     python3-pip         # python3 package installer
