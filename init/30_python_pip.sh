@@ -1,15 +1,15 @@
-# only run for macOS
-is_osx || return 1
-
 # Homebrew installs python2 pip as "pip2"
-for pip_cmd in pip2 pip FAIL ; do [[ "$(which $pip_cmd)" ]] && break; done
+is_osx && pips=(pip2 pip FAIL)
+is_ubuntu && pips=(pip3 pip FAIL)
+
+for pip_cmd in $pips ; do [[ "$(which $pip_cmd)" ]] && break; done
 
 # Exit if pip is not installed.
 [[ $pip_cmd == FAIL ]] && e_error "Pip needs to be installed." && return 1
 
 # Add pip packages
 pip_packages=(
-    bs4
+    beautifulsoup4
     django
     gmpy2
     pylint
