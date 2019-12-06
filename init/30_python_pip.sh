@@ -1,4 +1,8 @@
-# Homebrew installs python2 pip as "pip2"
+if [ ! \( is_osx -o is_ubuntu \) ] ; then
+    exit 1
+fi
+
+# Homebrew installs python2's pip as "pip2"
 is_osx && pips=(pip2 pip FAIL)
 is_ubuntu && pips=(pip3 pip FAIL)
 
