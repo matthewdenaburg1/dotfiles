@@ -29,6 +29,8 @@ apt_packages+=(
     cmake
     make
 
+    manpages-posix-dev  # man pages for POSIX/builtins
+
     g++
     gcc
     python3
