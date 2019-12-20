@@ -393,3 +393,6 @@ function install_from_zip() {
 
 # Run anything else that may need to be run.
 type -t other_stuff >/dev/null && other_stuff
+
+ora_url='https://www.oracle.com/database/technologies/instant-client/linux-x86-64-downloads.html'
+echo "Also install '${ora_url}' if needed."
