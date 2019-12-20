@@ -72,6 +72,7 @@ apt_packages+=(
     poppler-utils       # image utilities
     pdfgrep             # text search in pdfs
     imagemagick
+	rlwrap              # read line wrapper
 )
 
 # apt_packages+=(vim)
