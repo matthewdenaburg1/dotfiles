@@ -1,6 +1,5 @@
 " File: sh.vim
 
-setlocal expandtab
 setlocal foldmethod=syntax
 setlocal nowrap
 setlocal shiftwidth=4
