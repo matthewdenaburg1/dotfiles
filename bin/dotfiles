@@ -66,13 +66,18 @@ function is_osx() {
 function is_ubuntu() {
   [[ "$(cat /etc/issue 2> /dev/null)" =~ Ubuntu ]] || return 1
 }
+function is_wsl() {
+  # src: https://stackoverflow.com/a/43618657/664950
+  grep -i -E -q "(Microsoft|WSL)" /proc/version &>/dev/null || return 1
+}
 function is_ubuntu_desktop() {
   dpkg -l ubuntu-desktop >/dev/null 2>&1 || return 1
 }
 function get_os() {
-  for os in osx ubuntu ubuntu_desktop; do
-    is_$os; [[ $? == ${1:-0} ]] && echo $os
+  for os in osx wsl ubuntu ubuntu_desktop; do
+    is_$os; [[ $? == ${1:-0} ]] && echo $os && return 0
   done
+  return 1
 }
 
 # Remove an entry from $PATH
