@@ -1,24 +1,24 @@
-ORACLE_HOME=/opt/oracle/instantclient_10_2/
-export ORACLE_HOME
+ORACLE_HOME=/opt/oracle/instantclient_10_2
+[[ -d $ORACLE_HOME ]] && export ORACLE_HOME
 
 paths=(
-  ~/.local/bin
-  $DOTFILES/bin
-  /usr/local/opt/coreutils/libexec/gnubin
-  $ORACLE_HOME/bin
+    ~/.local/bin
+    $DOTFILES/bin
+    /usr/local/opt/coreutils/libexec/gnubin
+	$ORACLE_HOME/bin
 )
 
 libs=(
-  $ORACLE_HOME/lib
+    $ORACLE_HOME/lib
 )
 
 export LD_LIBRARY_PATH
-for l in "${libs[@]}"; do
-	[[ -d "$l" ]] && LD_LIBRARY_PATH="$l:$(lib_path_remove "$l")"
+for lib in "${libs[@]}"; do
+	[[ -d "$lib" ]] && LD_LIBRARY_PATH="$lib:$(lib_path_remove "$lib")"
 done
 
 export PATH
-for p in "${paths[@]}"; do
-  [[ -d "$p" ]] && PATH="$p:$(path_remove "$p")"
+for pth in "${paths[@]}"; do
+    [[ -d "$pth" ]] && PATH="$pth:$(path_remove "$pth")"
 done
-unset l libs p paths
+unset lib libs pth paths

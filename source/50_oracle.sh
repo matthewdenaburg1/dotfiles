@@ -1,4 +1,4 @@
-[ -x /opt/oracle/instantclient_10_2/sqlplus ] || return 1
+[[ -x "${ORACLE_HOME}/bin/sqlplus" ]] || return 1
 
 if [[ "$(type -P rlwrap)" ]] ; then
     echo -n
@@ -7,14 +7,14 @@ else
 fi
 
 rlwrap_opts=(
-    --ansi-colour-aware
-    --complete-filenames
-    "--extra-char-after-completion ''"
-    --pass-sigint-as-sigterm
-    --multi-line
+    -A      # --ansi-colour-aware
+    -c      # --complete-filenames
+    "-e ''" # "--extra-char-after-completion ''"
+    -I      # --pass-sigint-as-sigterm
+    -m      # --multi-line
 )
 
 alias rlwrap="rlwrap ${rlwrap_opts[@]}"
-alias sqlplus="rlwrap ${rlwrap_opts[@]} /opt/oracle/instantclient_10_2/sqlplus"
+alias sqlplus="rlwrap ${rlwrap_opts[@]} sqlplus"
 
 export RLWRAP_EDITOR="vim '+call cursor(%L,%C)'"
