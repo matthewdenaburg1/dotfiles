@@ -14,7 +14,6 @@ for pip_cmd in $pips ; do [[ "$(which $pip_cmd)" ]] && break; done
 # Add pip packages
 pip_packages=(
     beautifulsoup4
-    django
     gmpy2
     pylint
     python-dateutil
