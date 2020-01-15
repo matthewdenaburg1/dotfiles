@@ -8,3 +8,8 @@ ${ora_url}
 
 if needed
 EOF
+
+mkdir -p /opt/oracle/instantclient_10_2
+cd /opt/oracle/instantclient_10_2
+mkdir -p bin network/admin sqlplus/admin sqlplus/mesg
+cd -
