@@ -46,6 +46,8 @@ apt_packages+=(
     python3-requests    # http request library
     python3-tabulate    # pretty print tabular data
     pylint3             # check python3 code against standards
+	mypy
+	mypy-doc
 
     athena-jot          # jot - print sequential or random data
     curl
