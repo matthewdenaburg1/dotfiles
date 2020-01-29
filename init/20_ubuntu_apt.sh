@@ -56,6 +56,7 @@ apt_packages+=(
     html-xml-utils      # html/xml manipulation tools
     htop                # examine processes
     jq                  # command line json processor
+	latexmk
     less
     p7zip-full          # 7zip utility
     telnet
