@@ -59,6 +59,7 @@ apt_packages+=(
 	latexmk
     less
     p7zip-full          # 7zip utility
+	sqlformat
     telnet
     thefuck             # suggest corrections for invalid bash commands
     tree                # list files in a tree-like format
