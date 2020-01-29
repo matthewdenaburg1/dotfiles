@@ -19,3 +19,6 @@
 [submodule "tmux plugins"]
 	path = link/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "vim-tex"]
+	path = link/.vim/UltiSnips/latex-snippets
+	url = https://github.com/gillescastel/latex-snippets
