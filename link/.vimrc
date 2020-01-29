@@ -43,7 +43,8 @@ Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'lervag/vimtex'
 	" vimtex settings - see https://castel.dev/post/lecture-notes-1/
 	let g:tex_flavor='latex'
-	let g:vimtex_view_method='/mnt/c/Windows/SystemApps/Microsoft.MicrosoftEdge_8wekyb3d8bbwe/MicrosoftEdge.exe'
+	let g:vimtex_view_method='general'
+	let g:vimtex_view_general_viewer='openvt'
 	let g:vimtex_quickfix_mode=0
 
 Plug 'KeitaNakamura/tex-conceal.vim'
