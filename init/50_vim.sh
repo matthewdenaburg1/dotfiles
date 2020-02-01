@@ -1,5 +1,5 @@
 # Backups, swaps and undos are stored here.
-mkdir -p $DOTFILES/caches/vim
+mkdir -p $DOTFILES/caches/vim/{swap,undo,backup}
 
 # Download Vim plugins.
 if [[ "$(type -P vim)" ]]; then
