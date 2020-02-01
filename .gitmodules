@@ -21,4 +21,4 @@
 	url = https://github.com/tmux-plugins/tpm
 [submodule "vim-tex"]
 	path = link/.vim/UltiSnips/latex-snippets
-	url = https://github.com/gillescastel/latex-snippets
+	url = https://github.com/matthewdenaburg1/latex-snippets
