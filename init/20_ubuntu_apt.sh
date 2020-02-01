@@ -65,7 +65,9 @@ apt_packages+=(
     tree                # list files in a tree-like format
     unzip               # unzip zip files
     whois
+	x11-apps
     zip                 # create zip files
+
 
     maven               # maven
     tmux
@@ -77,6 +79,8 @@ apt_packages+=(
     pdfgrep             # text search in pdfs
     imagemagick
 	rlwrap              # read line wrapper
+	mupdf
+	mupdf-tools
 )
 
 # apt_packages+=(vim)
