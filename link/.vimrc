@@ -43,12 +43,8 @@ Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'lervag/vimtex'
 	" vimtex settings - see https://castel.dev/post/lecture-notes-1/
 	let g:tex_flavor='latex'
-	let g:vimtex_view_method='general'
-	let g:vimtex_view_general_viewer='openvt'
+	let g:vimtex_view_method='mupdf'
 	let g:vimtex_quickfix_mode=0
-
-Plug 'KeitaNakamura/tex-conceal.vim'
-	set conceallevel=1
 	let g:tex_conceal='abdmg'
 
 Plug 'sirver/ultisnips'
@@ -58,6 +54,8 @@ Plug 'sirver/ultisnips'
 	let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 	" If you want :UltiSnipsEdit to split your window.
 	let g:UltiSnipsEditSplit='vertical'
+
+Plug 'honza/vim-snippets'
 
 call plug#end()
 " }}}1
@@ -80,6 +78,8 @@ set mouse=hn                    " Mouse in normal and help modes
 let &showbreak = '... '         " show '... ' on indented lines
 set belloff=all                 " turn alert bell off (src: https://stackoverflow.com/a/41524053/664950)
 set pastetoggle=<F3> 			" 
+
+set directory^=$DOTFILES/caches/vim/swap// " swap file dir
 " }}}
 
 " Basic mappings {{{
