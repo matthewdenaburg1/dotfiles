@@ -9,7 +9,7 @@ Plug 'tpope/vim-surround'                     " mappings to wrap text with quote
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-sensible'
 
-Plug 'matthewdenaburg1/latex-snippets'
+Plug 'matthewdenaburg1/my-vim-snippets'
 
 Plug 'vim-scripts/SQLComplete.vim'
 
@@ -49,6 +49,7 @@ Plug 'sirver/ultisnips'
 	let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 	let g:UltiSnipsListSnippets = '<C-Space>'
 	let g:UltiSnipsEditSplit = 'vertical'
+	let g:UltiSnipsSnippetsDirectories = '$HOME/.vim/plugged/latex-snippets/UltiSnips/'
 
 Plug 'honza/vim-snippets'
 
