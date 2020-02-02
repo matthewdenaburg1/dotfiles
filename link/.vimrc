@@ -9,6 +9,8 @@ Plug 'tpope/vim-surround'                     " mappings to wrap text with quote
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-sensible'
 
+Plug 'matthewdenaburg1/latex-snippets'
+
 Plug 'vim-scripts/SQLComplete.vim'
 
 Plug 'tmux-plugins/vim-tmux-clipboard'
