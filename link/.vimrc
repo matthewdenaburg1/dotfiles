@@ -81,8 +81,6 @@ set mouse=hn                    " Mouse in normal and help modes
 let &showbreak = '... '         " show '... ' on indented lines
 set belloff=all                 " turn alert bell off (src: https://stackoverflow.com/a/41524053/664950)
 set pastetoggle=<F3> 			" 
-
-set directory^=$DOTFILES/caches/vim/swap// " swap file dir
 " }}}
 
 " Basic mappings {{{
