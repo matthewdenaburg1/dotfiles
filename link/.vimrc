@@ -13,7 +13,7 @@ Plug 'matthewdenaburg1/my-vim-snippets'
 
 Plug 'vim-scripts/SQLComplete.vim'
 
-Plug 'tmux-plugins/vim-tmux-clipboard'
+Plug 'roxma/vim-tmux-clipboard'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
 Plug 'PProvost/vim-ps1', { 'for': 'ps1' }     " PowerShell plugin
