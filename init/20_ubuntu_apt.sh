@@ -57,6 +57,7 @@ apt_packages+=(
     jq                  # command line json processor
 	latexmk
     less
+	rename
     p7zip-full          # 7zip utility
 	sqlformat
     telnet
@@ -66,7 +67,6 @@ apt_packages+=(
     whois
 	x11-apps
     zip                 # create zip files
-
 
     maven               # maven
     tmux
