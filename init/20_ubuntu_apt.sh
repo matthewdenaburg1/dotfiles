@@ -48,6 +48,8 @@ apt_packages+=(
 	mypy
 	mypy-doc
 
+    npm
+
     athena-jot          # jot - print sequential or random data
     curl
     git
