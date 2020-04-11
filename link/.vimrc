@@ -107,10 +107,3 @@ inoremap <left>  <nop>
 nnoremap <left>  <nop>
 vnoremap <left>  <nop>
 " }}}
-
-" split right to terminal {{{
-augroup split_right_to_term
-	autocmd!
-	autocmd FileType * command! Term :vertical rightbelow terminal
-augroup END
-" }}}
