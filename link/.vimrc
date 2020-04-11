@@ -85,30 +85,24 @@ set belloff=all                 " turn alert bell off (src: https://stackoverflo
 set pastetoggle=<F3> 			" 
 " }}}
 
-" Basic mappings {{{
-" open $MYVIMRC in a vertically split window
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-" source $MYVIMRC
-nnoremap <leader>sv :source $MYVIMRC<cr>
-" exit insert mode
-inoremap jk <esc>
-" }}}
+" mappings {{{1
+    " exit insert mode
+    inoremap jk <esc>
 
-
-" Disable arrow keys in normal, visual, and insert mode {{{
-inoremap <up>    <nop>
-nnoremap <up>    <nop>
-vnoremap <up>    <nop>
-inoremap <right> <nop>
-nnoremap <right> <nop>
-vnoremap <right> <nop>
-inoremap <down>  <nop>
-nnoremap <down>  <nop>
-vnoremap <down>  <nop>
-inoremap <left>  <nop>
-nnoremap <left>  <nop>
-vnoremap <left>  <nop>
-" }}}
+    " Disable arrow keys in normal, visual, and insert mode
+    inoremap <up>    <nop>
+    nnoremap <up>    <nop>
+    vnoremap <up>    <nop>
+    inoremap <right> <nop>
+    nnoremap <right> <nop>
+    vnoremap <right> <nop>
+    inoremap <down>  <nop>
+    nnoremap <down>  <nop>
+    vnoremap <down>  <nop>
+    inoremap <left>  <nop>
+    nnoremap <left>  <nop>
+    vnoremap <left>  <nop>
+" }}}1
 
 " autoresize windows on vim window size change {{{
 " :h VimResize
