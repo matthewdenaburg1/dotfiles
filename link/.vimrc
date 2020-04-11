@@ -4,6 +4,7 @@ filetype off
 
 " Vim plugins ("vim-plug") {{{1
 call plug#begin('~/.vim/plugged/')
+
 Plug 'tpope/vim-commentary'                   " provides comment mappings for code
 Plug 'tpope/vim-surround'                     " mappings to wrap text with quotes, etc.
 Plug 'tpope/vim-git'
@@ -78,6 +79,7 @@ set number
 set relativenumber
 set numberwidth=6
 set mouse=hn                    " Mouse in normal and help modes
+set ttymouse=xterm2             " Make the mouse work in tmux
 let &showbreak = '... '         " show '... ' on indented lines
 set belloff=all                 " turn alert bell off (src: https://stackoverflow.com/a/41524053/664950)
 set pastetoggle=<F3> 			" 
