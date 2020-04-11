@@ -107,3 +107,12 @@ inoremap <left>  <nop>
 nnoremap <left>  <nop>
 vnoremap <left>  <nop>
 " }}}
+
+" autoresize windows on vim window size change {{{
+" :h VimResize
+" src:
+" https://www.reddit.com/r/vim/comments/fyivrb/keymapping_to_automatically_resize_vim_splits/
+if exists('$TMUX')
+    autocmd VimResized * wincmd =
+endif
+" }}}
