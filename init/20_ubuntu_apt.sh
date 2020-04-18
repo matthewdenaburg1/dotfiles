@@ -29,6 +29,10 @@ apt_packages+=(
     cmake
     make
 
+    libgmp-dev
+    libmpfr-dev
+    libmpc-dev
+
     manpages-posix-dev  # man pages for POSIX/builtins
 
     g++
