@@ -39,15 +39,6 @@ apt_packages+=(
     default-jdk         # standard jdk
     default-jdk-doc     # standard jdk documentation
 
-    python3-bs4         # error-tolerant HTML parser
-    python3-gmpy2       # GMP for python
-    python3-pip         # python3 package installer
-    python3-requests    # http request library
-    python3-tabulate    # pretty print tabular data
-    pylint3             # check python3 code against standards
-	mypy
-	mypy-doc
-
     npm
 
     athena-jot          # jot - print sequential or random data
