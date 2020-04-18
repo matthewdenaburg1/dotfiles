@@ -48,17 +48,17 @@ apt_packages+=(
     html-xml-utils      # html/xml manipulation tools
     htop                # examine processes
     jq                  # command line json processor
-	latexmk
+    latexmk
     less
-	rename
+    rename
     p7zip-full          # 7zip utility
-	sqlformat
+    sqlformat
     telnet
     thefuck             # suggest corrections for invalid bash commands
     tree                # list files in a tree-like format
     unzip               # unzip zip files
     whois
-	x11-apps
+    x11-apps
     zip                 # create zip files
 
     maven               # maven
@@ -70,9 +70,9 @@ apt_packages+=(
     poppler-utils       # image utilities
     pdfgrep             # text search in pdfs
     imagemagick
-	rlwrap              # read line wrapper
-	mupdf
-	mupdf-tools
+    rlwrap              # read line wrapper
+    mupdf
+    mupdf-tools
 )
 
 # apt_packages+=(vim)

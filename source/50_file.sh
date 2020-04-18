@@ -26,7 +26,7 @@ fi
 if [[ "$(type -P tree)" ]]; then
     alias ll='tree --dirsfirst -apughDFiC -L 1'
     alias lsd='ll -d'
-	alias mytree='tree -C -a -I ".cache|.git*" -L 10 --filelimit 30'
+    alias mytree='tree -C -a -I ".cache|.git*" -L 10 --filelimit 30'
 else
     alias la='ls -A'
     alias ll='ls -Ahl'

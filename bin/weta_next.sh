@@ -47,35 +47,35 @@ next=3
 
 while getopts ':hp:n:' opt ; do
     case ${opt} in
-	p)  # previous NUM songs
-	    previous="$(echo ${OPTARG} | tr --complement --delete '[0-9]')"
-	    if test -z "${previous}" ; then
+    p)  # previous NUM songs
+        previous="$(echo ${OPTARG} | tr --complement --delete '[0-9]')"
+        if test -z "${previous}" ; then
             echo "Invalid argument provided to -${OPTARG}." >&2
             usage && exit 1
-	    fi
-	    ;;
-	n)  # next NUM songs
-	    next="$(echo ${OPTARG} | tr --complement --delete '[0-9]')"
-	    if test -z "${next}" ; then
+        fi
+        ;;
+    n)  # next NUM songs
+        next="$(echo ${OPTARG} | tr --complement --delete '[0-9]')"
+        if test -z "${next}" ; then
             echo "Invalid argument provided to -${OPTARG}." >&2
             usage && exit 1
-	    fi
-	    ;;
-	a)
-	    echo "-${OPTARG} not implemented yet." >&2
-	    exit 2
-	    ;;
-	h)
-	    usage && exit 0
-	    ;;
-	\?)
-	    echo "Invalid option: -${OPTARG} is not valid." >&2
-	    usage && exit 1
-	    ;;
-	:)
-	    echo "Invalid option: -${OPTARG} requires an argument" >&2
-	    usage && exit 1
-	    ;;
+        fi
+        ;;
+    a)
+        echo "-${OPTARG} not implemented yet." >&2
+        exit 2
+        ;;
+    h)
+        usage && exit 0
+        ;;
+    \?)
+        echo "Invalid option: -${OPTARG} is not valid." >&2
+        usage && exit 1
+        ;;
+    :)
+        echo "Invalid option: -${OPTARG} requires an argument" >&2
+        usage && exit 1
+        ;;
     esac
 done
 

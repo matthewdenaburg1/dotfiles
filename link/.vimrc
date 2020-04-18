@@ -20,46 +20,46 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'PProvost/vim-ps1', { 'for': 'ps1' }     " PowerShell plugin
 
 Plug 'nathanaelkane/vim-indent-guides'
-	let g:indent_guides_enable_on_vim_startup = 1
-	let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+    let g:indent_guides_enable_on_vim_startup = 1
+    let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 
 Plug 'vim-syntastic/syntastic'
-	let g:syntastic_python_checkers = ['python3']
+    let g:syntastic_python_checkers = ['python3']
 
 Plug 'jeetsukumaran/vim-indentwise'
 
 " Builds YouCompleteMe {{{2
 function! BuildYCM(info)
-	" info is a dictionary with 3 fields
-	" - name:   name of the plugin
-	" - status: 'installed', 'updated', or 'unchanged'
-	" - force:  set on PlugInstall! or PlugUpdate!
-	if a:info.status == 'installed' || a:info.force
-		!python3 install.py --java-completer --clangd-completer
-	endif
+    " info is a dictionary with 3 fields
+    " - name:   name of the plugin
+    " - status: 'installed', 'updated', or 'unchanged'
+    " - force:  set on PlugInstall! or PlugUpdate!
+    if a:info.status == 'installed' || a:info.force
+        !python3 install.py --java-completer --clangd-completer
+    endif
 endfunction
 " }}}2
 
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
-	let g:ycm_filepath_completion_use_working_dir = 1
+    let g:ycm_filepath_completion_use_working_dir = 1
 
 Plug 'sirver/ultisnips'
-	" Ulitsnips settings - see https://stackoverflow.com/a/49193259/664950
-	let g:UltiSnipsExpandTrigger = '<C-j>'
-	let g:UltiSnipsJumpForwardTrigger = '<C-j>'
-	let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
-	let g:UltiSnipsListSnippets = '<C-Space>'
-	let g:UltiSnipsEditSplit = 'vertical'
-	let g:UltiSnipsSnippetsDirectories = '$HOME/.vim/plugged/latex-snippets/UltiSnips/'
+    " Ulitsnips settings - see https://stackoverflow.com/a/49193259/664950
+    let g:UltiSnipsExpandTrigger = '<C-j>'
+    let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+    let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+    let g:UltiSnipsListSnippets = '<C-Space>'
+    let g:UltiSnipsEditSplit = 'vertical'
+    let g:UltiSnipsSnippetsDirectories = '$HOME/.vim/plugged/latex-snippets/UltiSnips/'
 
 Plug 'honza/vim-snippets'
 
 Plug 'lervag/vimtex', { 'for': 'tex' }
-	" vimtex settings - see https://castel.dev/post/lecture-notes-1/
-	let g:tex_flavor = 'latex'
-	let g:vimtex_view_method = 'mupdf'
-	let g:vimtex_quickfix_mode = 0
-	let g:tex_conceal = 'abdmg'
+    " vimtex settings - see https://castel.dev/post/lecture-notes-1/
+    let g:tex_flavor = 'latex'
+    let g:vimtex_view_method = 'mupdf'
+    let g:vimtex_quickfix_mode = 0
+    let g:tex_conceal = 'abdmg'
 
 call plug#end()
 " }}}1
@@ -82,7 +82,7 @@ set mouse=hn                    " Mouse in normal and help modes
 set ttymouse=xterm2             " Make the mouse work in tmux
 let &showbreak = '... '         " show '... ' on indented lines
 set belloff=all                 " turn alert bell off (src: https://stackoverflow.com/a/41524053/664950)
-set pastetoggle=<F3> 			" 
+set pastetoggle=<F3>            " 
 " }}}
 
 " mappings {{{1

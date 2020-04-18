@@ -65,4 +65,4 @@
 [remote "origin"]
   push = HEAD
 [diff]
-	tool = vimdiff
+  tool = vimdiff

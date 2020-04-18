@@ -5,7 +5,7 @@ paths=(
     ~/.local/bin
     $DOTFILES/bin
     /usr/local/opt/coreutils/libexec/gnubin
-	$ORACLE_HOME/bin
+    $ORACLE_HOME/bin
 )
 
 libs=(
@@ -14,7 +14,7 @@ libs=(
 
 export LD_LIBRARY_PATH
 for lib in "${libs[@]}"; do
-	[[ -d "$lib" ]] && LD_LIBRARY_PATH="$lib:$(lib_path_remove "$lib")"
+    [[ -d "$lib" ]] && LD_LIBRARY_PATH="$lib:$(lib_path_remove "$lib")"
 done
 
 export PATH
