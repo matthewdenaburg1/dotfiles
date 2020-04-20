@@ -18,7 +18,6 @@ pip_packages=(
     pip3        # python3 package installer
     requests    # http request library
     tabulate    # pretty print tabular data
-    pylin3
     python-dateutil
     mypy
 )
