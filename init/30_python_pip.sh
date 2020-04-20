@@ -15,7 +15,6 @@ for pip_cmd in $pips ; do [[ "$(which $pip_cmd)" ]] && break; done
 pip_packages=(
     bs4         # error-tolerant HTML parser
     gmpy2       # GMP for python
-    pip3        # python3 package installer
     requests    # http request library
     tabulate    # pretty print tabular data
     python-dateutil
