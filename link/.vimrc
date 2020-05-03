@@ -42,6 +42,7 @@ endfunction
 
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
     let g:ycm_filepath_completion_use_working_dir = 1
+	let g:ycm_autoclose_preview_window_after_insertion  = 1
 
 Plug 'sirver/ultisnips'
     " Ulitsnips settings - see https://stackoverflow.com/a/49193259/664950
