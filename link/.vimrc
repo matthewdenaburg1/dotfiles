@@ -75,14 +75,14 @@ let maplocalleader = "."
 
 
 " basic settings {{{
-set number
-set relativenumber
-set numberwidth=6
-set mouse=hn                    " Mouse in normal and help modes
-set ttymouse=xterm2             " Make the mouse work in tmux
-let &showbreak = '... '         " show '... ' on indented lines
-set belloff=all                 " turn alert bell off (src: https://stackoverflow.com/a/41524053/664950)
-set pastetoggle=<F3>            " 
+	set number
+	set relativenumber
+	set numberwidth=6
+	set mouse=hn                    " Mouse in normal and help modes
+	set ttymouse=xterm2             " Make the mouse work in tmux
+	let &showbreak = '... '         " show '... ' on indented lines
+	set belloff=all                 " turn alert bell off (src: https://stackoverflow.com/a/41524053/664950)
+	set pastetoggle=<F3>            " 
 " }}}
 
 " mappings {{{1
@@ -105,10 +105,10 @@ set pastetoggle=<F3>            "
 " }}}1
 
 " autoresize windows on vim window size change {{{
-" :h VimResize
-" src:
-" https://www.reddit.com/r/vim/comments/fyivrb/keymapping_to_automatically_resize_vim_splits/
-if exists('$TMUX')
-    autocmd VimResized * wincmd =
-endif
+	" :h VimResize
+	" src:
+	" https://www.reddit.com/r/vim/comments/fyivrb/
+	if exists('$TMUX')
+		autocmd VimResized * wincmd =
+	endif
 " }}}
