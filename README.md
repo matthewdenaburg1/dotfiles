@@ -101,7 +101,7 @@ Why? Because I often completely break this repo while updating. Which means that
 #### Ubuntu
 
 ```sh
-export DOTFILES_GH_USER=cowboy
+export DOTFILES_GH_USER=matthewdenaburg1
 export DOTFILES_GH_BRANCH=master
 bash -c "$(wget -qO- https://raw.github.com/$DOTFILES_GH_USER/dotfiles/$DOTFILES_GH_BRANCH/bin/dotfiles)" && source ~/.bashrc
 ```
@@ -109,7 +109,7 @@ bash -c "$(wget -qO- https://raw.github.com/$DOTFILES_GH_USER/dotfiles/$DOTFILES
 #### macOS
 
 ```sh
-export DOTFILES_GH_USER=cowboy
+export DOTFILES_GH_USER=matthewdenaburg1
 export DOTFILES_GH_BRANCH=master
 bash -c "$(curl -fsSL https://raw.github.com/$DOTFILES_GH_USER/dotfiles/$DOTFILES_GH_BRANCH/bin/dotfiles)" && source ~/.bashrc
 ```
