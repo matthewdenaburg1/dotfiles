@@ -79,6 +79,7 @@ let maplocalleader = "."
 	set number
 	set relativenumber
 	set numberwidth=6
+	set expandtab
 	set mouse=hn                    " Mouse in normal and help modes
 	set ttymouse=xterm2             " Make the mouse work in tmux
 	let &showbreak = '... '         " show '... ' on indented lines
