@@ -60,3 +60,5 @@ Desktop.ini
 .*.swo
 
 __pycache__/
+
+.vscode/
