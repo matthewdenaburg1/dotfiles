@@ -42,7 +42,7 @@ endfunction
 
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
     let g:ycm_filepath_completion_use_working_dir = 1
-	let g:ycm_autoclose_preview_window_after_insertion  = 1
+    let g:ycm_autoclose_preview_window_after_insertion  = 1
 
 Plug 'sirver/ultisnips'
     " Ulitsnips settings - see https://stackoverflow.com/a/49193259/664950
@@ -76,15 +76,26 @@ let maplocalleader = "."
 
 
 " basic settings {{{
-	set number
-	set relativenumber
-	set numberwidth=6
-	set expandtab
-	set mouse=hn                    " Mouse in normal and help modes
-	set ttymouse=xterm2             " Make the mouse work in tmux
-	let &showbreak = '... '         " show '... ' on indented lines
-	set belloff=all                 " turn alert bell off (src: https://stackoverflow.com/a/41524053/664950)
-	set pastetoggle=<F3>            " 
+    set number
+    set relativenumber
+    set numberwidth=6
+
+    set nowrap
+
+    set foldcolumn=4
+    set foldminlines=4
+
+    set shiftwidth=4
+    set softtabstop=0
+    set tabstop=4
+    set expandtab
+
+    set mouse=hn                    " Mouse in normal and help modes
+    set ttymouse=xterm2             " Make the mouse work in tmux
+
+    let &showbreak = '... '         " show '... ' on indented lines
+
+    set belloff=all                 " turn alert bell off (src: https://stackoverflow.com/a/41524053/664950)
 " }}}
 
 " mappings {{{1
@@ -107,10 +118,10 @@ let maplocalleader = "."
 " }}}1
 
 " autoresize windows on vim window size change {{{
-	" :h VimResize
-	" src:
-	" https://www.reddit.com/r/vim/comments/fyivrb/
-	if exists('$TMUX')
-		autocmd VimResized * wincmd =
-	endif
+    " :h VimResize
+    " src:
+    " https://www.reddit.com/r/vim/comments/fyivrb/
+    if exists('$TMUX')
+        autocmd VimResized * wincmd =
+    endif
 " }}}
