@@ -1,3 +1,3 @@
 " File: javascript.vim
 
-setlocal foldmethod=syntax
+setlocal foldmethod=indent
