@@ -1,3 +1,4 @@
 " File: c.vim
 
-setlocal foldmethod=syntax
+setlocal foldmethod=indent
+setlocal foldminlines=2
