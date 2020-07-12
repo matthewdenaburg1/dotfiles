@@ -8,7 +8,6 @@
 [apply]
   whitespace = fix
 [alias]
-  br = branch
   ci = commit
   co = checkout
   df = diff
