@@ -122,8 +122,10 @@ function __prompt_command() {
   # date: [HH:MM:SS]
   PS1="$PS1$c1[$c0$(date +"%I$c1:$c0%M %p")$c1]$c9"
 
-  # path: [user@host:path]
-  PS1="$PS1$c1[$c0\u$c1:$c0\w$c1]$c9"
+  # # path: [user:path]
+  # PS1="$PS1$c1[$c0\u$c1:$c0\w$c1]$c9"
+  # path: [path]
+  PS1="$PS1$c1[$c0\w$c1]$c9"
 
   __prompt_vcs_info=()
   # git: [branch:flags]
