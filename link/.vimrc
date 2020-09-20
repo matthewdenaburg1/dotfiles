@@ -9,6 +9,8 @@ Plug 'tpope/vim-commentary'                   " provides comment mappings for co
 Plug 'tpope/vim-surround'                     " mappings to wrap text with quotes, etc.
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-markdown'
 
 Plug 'matthewdenaburg1/my-vim-snippets'
 
