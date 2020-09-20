@@ -22,6 +22,11 @@
   lds = log --pretty=color --decorate --date=short --graph
   ls = ls-tree --name-only -r
   lsf = ls-tree --name-only --full-tree -r
+
+  subup = !"git submodule update --init --recursive; \
+        git submodule foreach --recursive git fetch; \
+        git submodule foreach git merge origin master"
+
 [branch "master"]
   remote = origin
   merge = refs/heads/master
