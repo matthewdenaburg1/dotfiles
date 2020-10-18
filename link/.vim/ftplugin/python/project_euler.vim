@@ -23,6 +23,6 @@ endfunction
 augroup project_euler
     autocmd!
 
-    autocmd BufNewFile Problem*.py call New_project_euler(expand("%:t:r"))
+    autocmd BufNewFile,BufEnter Problem*.py call New_project_euler(expand("%:t:r"))
 augroup END
 
