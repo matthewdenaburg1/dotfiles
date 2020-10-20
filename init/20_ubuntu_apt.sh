@@ -40,6 +40,7 @@ apt_packages+=(
     gcc
     python3.8
     python3.8-dev       # python3 header files
+    pypy3
     java-common
     default-jdk         # standard jdk
     default-jdk-doc     # standard jdk documentation
@@ -82,6 +83,8 @@ apt_packages+=(
 
 # apt_packages+=(vim)
 # is_ubuntu_desktop && apt_packages+=(vim-gnome)
+
+add_ppa ppa:pypy/ppa
 
 # # https://github.com/neovim/neovim/wiki/Installing-Neovim
 # add_ppa ppa:neovim-ppa/stable
