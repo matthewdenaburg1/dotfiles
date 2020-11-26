@@ -67,6 +67,8 @@ apt_packages+=(
     x11-apps
     zip                 # create zip files
 
+    acpi                # for battery access
+
     maven               # maven
     tmux
     vim
