@@ -24,12 +24,12 @@ fi
 
 # Directory listing
 if [[ "$(type -P tree)" ]]; then
-    alias ll='tree --dirsfirst -apughDFiC -L 1'
+    alias ll='command tree --dirsfirst -apughDFiC -L 1'
     alias lsd='ll -d'
-    alias mytree='tree -C -a -I ".cache|.git*" -L 10 --filelimit 30'
+    alias mytree='command tree -C -a -I ".cache|.git*" -L 10 --filelimit 30'
 else
-    alias la='ls -A'
-    alias ll='ls -Ahl'
+    alias la='command ls -A'
+    alias ll='command ls -Ahl'
     alias lsd='CLICOLOR_FORCE=1 ll | grep --color=never "^d"'
 fi
 
