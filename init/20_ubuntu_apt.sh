@@ -38,8 +38,8 @@ apt_packages+=(
 
     g++
     gcc
-    python3.8
-    python3.8-dev       # python3 header files
+    python3
+    python3-dev
     pypy3
     java-common
     default-jdk         # standard jdk
