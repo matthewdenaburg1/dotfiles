@@ -14,11 +14,14 @@ for pip_cmd in $pips ; do [[ "$(which $pip_cmd)" ]] && break; done
 # Add pip packages
 pip_packages=(
     bs4         # error-tolerant HTML parser
-    gmpy2       # GMP for python
     requests    # http request library
     tabulate    # pretty print tabular data
     python-dateutil
     mypy
+
+    gmpy2       # GMP for python
+    numpy
+    mpmath
 )
 
 installed_pip_packages="$($pip_cmd list 2>/dev/null | awk '{print $1}')"
