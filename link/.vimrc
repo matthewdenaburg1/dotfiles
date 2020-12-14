@@ -36,7 +36,9 @@ function! BuildYCM(info)
     " - name:   name of the plugin
     " - status: 'installed', 'updated', or 'unchanged'
     " - force:  set on PlugInstall! or PlugUpdate!
-    if a:info.status == 'installed' || a:info.force
+
+    " don't try to install YouCompleteMe on UMBC computers
+    if hostname() !~? '\.gl\.umbc\.edu$' && (a:info.status == 'installed' || a:info.force)
         !python3 install.py --java-completer --clangd-completer
     endif
 endfunction
