@@ -1,7 +1,9 @@
-[[ ! "$(which powerline-daemon)" ]] && return 1
+command -v powerline-daemon >/dev/null 2>&1 || return 1
 
 # Homebrew installs python2 as "python2"
-for python_cmd in python2 python FAIL; do [[ "$(which $python_cmd)" ]] && break; done
+for python_cmd in python2 python FAIL; do
+    command -v "$python_cmd" >/dev/null 2>&1 && break
+done
 
 # Powerline stuff.
 export POWERLINE_PREFIX="$($python_cmd -c "import powerline; print powerline.__path__[0]")"

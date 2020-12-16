@@ -6,7 +6,9 @@ fi
 is_osx && pips=(pip2 pip FAIL)
 is_ubuntu && pips=(pip3 pip FAIL)
 
-for pip_cmd in $pips ; do [[ "$(which $pip_cmd)" ]] && break; done
+for pip_cmd in $pips ; do
+    command -v "$pip_cmd" >/dev/null 2>&1 && break
+done
 
 # Exit if pip is not installed.
 [[ $pip_cmd == FAIL ]] && e_error "Pip needs to be installed." && return 1

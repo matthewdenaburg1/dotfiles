@@ -24,7 +24,7 @@ fi
 export ANSIBLE_NOCOWS=1
 
 # "fuck"
-if [[ "$(which thefuck)" ]]; then
+if command -v thefuck >/dev/null 2>&1; then
   eval $(thefuck --alias)
 fi
 

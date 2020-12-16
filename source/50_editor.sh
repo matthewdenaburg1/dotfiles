@@ -3,7 +3,7 @@
 export EDITOR=vim
 
 # If mvim is installed, use it instead of native vim
-if [[ "$(which mvim)" ]]; then
+if command -v mvim >/dev/null 2>&1; then
     EDITOR="vim -v"
     alias vim="$EDITOR"
 fi
