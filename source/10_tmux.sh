@@ -1,25 +1,20 @@
 # Start new tmux session or reattach to an existing session, but only if not
 # already inside a tmux session.
-function tm() {
-  local is_source=; [[ "$1" == "SOURCE" ]] && is_source=1 && shift
-  local tmux_no_logout=~/.dotfiles/caches/tmux-no-logout
-  if [[ ! "$TMUX" ]]; then
-    # Clean up any orphaned "no logout" file.
-    [[ -e $tmux_no_logout ]] && rm $tmux_no_logout
-    # Actually start tmux.
-    tmux ls >/dev/null 2>&1 && tmux attach "$@" || tmux "$@"
-    # If "no logout" doesn't exist, exit.
-    [[ -e $tmux_no_logout ]] && rm $tmux_no_logout || exit
-  elif [[ ! "$is_source" ]]; then
-    echo "Already in a tmux session!"
+
+# see https://stackoverflow.com/a/55426747/664950
+function tmuxstart() {
+  # if the session named 'local' is attached, use a new session. don't attach a second time.
+  if tmux list-sessions | grep -E 'local.*attached' >/dev/null 2>&1; then
+    tmux new-session
+  else  # otherwise, attach 'local'
+    tmux attach-session -t local
   fi
 }
 
-# Start tmux now (at login), but only if in a login shell and not already
-# started (and possibly detached) in this shell.
-if shopt -q login_shell && [[ ! "$TMUX_AUTO_STARTED" ]]; then
-  TMUX_AUTO_STARTED=1
-  tm SOURCE
+
+# see https://unix.stackexchange.com/a/113768/391864
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  shopt -q login_shell && tmuxstart
 fi
 
 # Run an arbitrary command in the current tmux window (if only one pane)
