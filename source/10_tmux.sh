@@ -1,13 +1,23 @@
 # Start new tmux session or reattach to an existing session, but only if not
 # already inside a tmux session.
 
-# see https://stackoverflow.com/a/55426747/664950
 function tmuxstart() {
-  # if the session named 'local' is attached, use a new session. don't attach a second time.
-  if tmux list-sessions | grep -E 'local.*attached' >/dev/null 2>&1; then
-    tmux new-session
-  else  # otherwise, attach 'local'
-    tmux attach-session -t local
+  # check if the tmux server is running (https://superuser.com/a/846014)
+  if ! tmux info &> /dev/null; then
+    tmux start-server
+  fi
+
+  # check if the server has an attached session called
+  tmux has-session -t main >/dev/null 2>&1
+  if [ "$?" -eq 1 ]; then
+    tmux new-session -A -s main
+  else
+    # if the session is attached, don't reuse.
+    if tmux list-sessions -F '#{session_name} #{session_attached}' | grep -E -q '^main 1$'; then
+      tmux new-session
+    else
+      tmux new-session -A -s main
+    fi
   fi
 }
 
