@@ -5,21 +5,14 @@ My OSX / Ubuntu dotfiles.
 ## Quick Start
 1. Read the [comment here](#heed-this-critically-important-warning-before-you-install)
 1. Update and upgrade APT using `sudo apt-get -qq update && sudo apt-get -qq dist-upgrade`
-1. *(Optional)* Create a new [SSH key][create-a-new-ssh-key] if you don't have one already and intend to use SSH instead of HTTPS for this repository. The steps are:
-   1. `cd` to your home directory.
-   1. Run `ssh-keygen -t ed25519 -C "your_email@example.com"`
-   1. When asked for a save path, enter `.ssh/github`.
-   1. Continue, follow the prompts.
-   1. Run `eval $(sh-agent -s)`
-   1. Run `ssh-add ~/.ssh/github`
-   1. Copy the contents of `~/.ssh/github.pub` and add it as described [here][add-ssh-key-to-account]
-1. Run the following (replace my GitHub username and default branch as appropriate).
+1. Run the following (replace my GitHub username and default branch as appropriate, of course).
    ```sh
    export DOTFILES_GH_USER=matthewdenaburg1
    export DOTFILES_GH_BRANCH=master
    bash -c "$(wget -qO- https://raw.github.com/$DOTFILES_GH_USER/dotfiles/$DOTFILES_GH_BRANCH/bin/dotfiles)" && source ~/.bashrc
    ```
 1. Follow the prompts.
+1. When it's done, generate SSH keys.
 
 ## About this project
 
