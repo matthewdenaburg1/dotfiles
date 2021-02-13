@@ -39,6 +39,7 @@ apt_packages+=(
     g++
     gcc
     python3
+    python3-pip
     python3-dev
     pypy3
     java-common
