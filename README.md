@@ -2,6 +2,25 @@
 
 My OSX / Ubuntu dotfiles.
 
+## Quick Start
+1. Read the [comment here](#heed-this-critically-important-warning-before-you-install)
+1. Update and upgrade APT using `sudo apt-get -qq update && sudo apt-get -qq dist-upgrade`
+1. *(Optional)* Create a new [SSH key][create-a-new-ssh-key] if you don't have one already and intend to use SSH instead of HTTPS for this repository. The steps are:
+   1. `cd` to your home directory.
+   1. Run `ssh-keygen -t ed25519 -C "your_email@example.com"`
+   1. When asked for a save path, enter `.ssh/github`.
+   1. Continue, follow the prompts.
+   1. Run `eval $(sh-agent -s)`
+   1. Run `ssh-add ~/.ssh/github`
+   1. Copy the contents of `~/.ssh/github.pub` and add it as described [here][add-ssh-key-to-account]
+1. Run the following (replace my GitHub username and default branch as appropriate).
+   ```sh
+   export DOTFILES_GH_USER=matthewdenaburg1
+   export DOTFILES_GH_BRANCH=master
+   bash -c "$(wget -qO- https://raw.github.com/$DOTFILES_GH_USER/dotfiles/$DOTFILES_GH_BRANCH/bin/dotfiles)" && source ~/.bashrc
+   ```
+1. Follow the prompts.
+
 ## About this project
 
 I've been using bash on-and-off for a long time (since Slackware Linux was distributed on 1.44MB floppy disks). In all that time, every time I've set up a new Linux or OS X machine, I've copied over my `.bashrc` file and my `~/bin` folder to each machine manually. And I've never done a very good job of actually maintaining these files. It's been a total mess.
@@ -92,6 +111,8 @@ _Tested in Ubuntu 14.04 LTS_
 
 Why? Because I often completely break this repo while updating. Which means that if I do that and you run the `dotfiles` command, your home directory will burst into flames, and you'll have to go buy a new computer. No, not really, but it will be very messy.
 
+Return to [Quick Start](#quick-start).
+
 ### Actual installation (for you)
 
 1. [Read my gently-worded note](#heed-this-critically-important-warning-before-you-install)
@@ -169,3 +190,7 @@ Check it out:
 Copyright (c) 2014 "Cowboy" Ben Alman  
 Licensed under the MIT license.  
 <http://benalman.com/about/license/>
+
+
+[create-a-new-ssh-key]: https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+[add-ssh-key-to-account]: https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
