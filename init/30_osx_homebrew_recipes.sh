@@ -23,6 +23,7 @@ recipes=(
   gcc
   gettext
   git
+  git-extras
   glib
   gnu-sed
   gnu-time
@@ -30,8 +31,9 @@ recipes=(
   googler
   grep
   highlight
+  htop-osx
   hr
-  lastpass-cli
+  jq
   less
   lesspipe
   mysql
@@ -64,6 +66,13 @@ brew_install_recipes
 
 # This is where brew stores its binary symlinks
 local binroot="$(brew --config | awk '/HOMEBREW_PREFIX/ {print $2}')"/bin
+
+# htop
+if [[ "$(type -P $binroot/htop)" ]] && [[ "$(stat -L -f "%Su:%Sg" "$binroot/htop")" != "root:wheel" ]]; then
+  e_header "Updating htop permissions"
+  sudo chown root:wheel "$binroot/htop"
+  sudo chmod u+s "$binroot/htop"
+fi
 
 # bash
 if [[ "$(type -P $binroot/bash)" && "$(cat /etc/shells | grep -q "$binroot/bash")" ]]; then

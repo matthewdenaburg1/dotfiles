@@ -6,9 +6,9 @@ is_osx || return 1
 
 # Ensure the cask kegs are installed.
 kegs=(
-    homebrew/cask
-    homebrew/cask-drivers
-    homebrew/cask-fonts
+  homebrew/cask-drivers
+  homebrew/cask-fonts
+  homebrew/cask-versions
 )
 brew_tap_kegs
 
@@ -66,6 +66,8 @@ casks=(
 cask_flags=(
     --no-binaries
     --appdir=/Applications
+    --appdir=/Applications
+    --appdir=/Applications
     --fontdir=~/Library/Fonts
     --servicedir=~/Library/Services
     --colorPickerdir=~/Library/ColorPickers
@@ -74,30 +76,28 @@ cask_flags=(
     --screen_saverdir=~/Library/Screen Savers
 )
 
-
 # Install Homebrew casks.
 casks=($(setdiff "${casks[*]}" "$(brew cask list 2>/dev/null)"))
 if (( ${#casks[@]} > 0 )); then
-    e_header "Installing Homebrew casks: ${casks[*]}"
-    for cask in "${casks[@]}"; do
-        brew cask install $cask "${cask_flags[@]}"
-    done
-    # brew cask cleanup
+  e_header "Installing Homebrew casks: ${casks[*]}"
+  for cask in "${casks[@]}"; do
+    brew cask install $cask "${cask_flags[@]}"
+  done
 fi
 
 # Work around colorPicker symlink issue.
 # https://github.com/caskroom/homebrew-cask/issues/7004
 cps=()
 for f in ~/Library/ColorPickers/*.colorPicker; do
-    [[ -L "$f" ]] && cps=("${cps[@]}" "$f")
+  [[ -L "$f" ]] && cps=("${cps[@]}" "$f")
 done
 
 if (( ${#cps[@]} > 0 )); then
-    e_header "Fixing colorPicker symlinks"
-    for f in "${cps[@]}"; do
-        target="$(readlink "$f")"
-        e_arrow "$(basename "$f")"
-        rm "$f"
-        cp -R "$target" ~/Library/ColorPickers/
-    done
+  e_header "Fixing colorPicker symlinks"
+  for f in "${cps[@]}"; do
+    target="$(readlink "$f")"
+    e_arrow "$(basename "$f")"
+    rm "$f"
+    cp -R "$target" ~/Library/ColorPickers/
+  done
 fi
