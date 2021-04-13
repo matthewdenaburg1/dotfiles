@@ -8,30 +8,28 @@
 /link/.ssh/known_hosts*
 
 # Don't commit Vim plugins, vim-plug will install them.
-/link/.vim/plugged
+/link/.vim/plugged/
 # still don't commit vim plugins.
-/link/.vim/bundle
+/link/.vim/bundle/
 # this is a symlink
 /link/.vim/autoload/plug.vim
 
+/link/.vim/.netrwhist
 
 # Don't commit rbenv temp files.
 /link/.rbenv/shims/
 /link/.rbenv/versions/
 /link/.rbenv/version
 
-/link/.vim/.netrwhist
 # Don't commit tmux plugins, tpm will install them.
-/link/.tmux/plugins
-# don't commit tmux resurrect files, either
-/link/.tmux/resurrect
+/link/.tmux/plugins/
 # or tmux sidebar
 /link/.tmux/sidebar
+# Don't commit tmux resurrect state.
+/link/.tmux/resurrect
 
 /link/.newsboat/history.*
 
-# Don't commit tmux resurrect state.
-/link/.tmux/resurrect
 
 # Ignore any file with LOCAL in the name (good for per-machine vars/functions)
 *LOCAL*
