@@ -1,6 +1,5 @@
-if [ ! \( is_osx -o is_ubuntu \) ] ; then
-    exit 1
-fi
+# only run if ubuntu or osx
+(is_ubuntu || is_osx) || exit 1
 
 # Homebrew installs python2's pip as "pip2"
 is_osx && pips=(pip2 pip FAIL)
@@ -15,6 +14,10 @@ done
 
 # Add pip packages
 pip_packages=(
+    # fixes slow pip
+    # see https://github.com/pypa/pip/issues/8485#issuecomment-669985335
+    keyring
+
     bs4         # error-tolerant HTML parser
     requests    # http request library
     tabulate    # pretty print tabular data
@@ -26,10 +29,6 @@ pip_packages=(
     mpmath
 )
 
-# fixes slow pip
-# see https://github.com/pypa/pip/issues/8485#issuecomment-669985335
-pip_packages+=(keyring)
-
 # is_osx || pip_packages+=(powerline-status)
 
 installed_pip_packages="$($pip_cmd list 2>/dev/null | awk '{print $1}')"
@@ -39,6 +38,6 @@ if (( ${#pip_packages[@]} > 0 )); then
     e_header "Installing pip packages (${#pip_packages[@]})"
     for package in "${pip_packages[@]}"; do
         e_arrow "$package"
-        $pip_cmd install "$package"
+        $pip_cmd install --user "$package"
     done
 fi
