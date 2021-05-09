@@ -1,8 +1,7 @@
 #### install tmux plugins
 
-if [ ! \( is_osx -o is_ubuntu \) ] ; then
-    exit 1
-fi
+# only run if ubuntu or osx
+(is_ubuntu || is_osx) || exit 1
 
 # if tmux is not installed, exit.
 command -v tmux &> /dev/null || exit 1
