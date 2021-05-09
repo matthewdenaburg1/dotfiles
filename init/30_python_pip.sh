@@ -26,6 +26,10 @@ pip_packages=(
     mpmath
 )
 
+# fixes slow pip
+# see https://github.com/pypa/pip/issues/8485#issuecomment-669985335
+pip_packages+=(keyring)
+
 # is_osx || pip_packages+=(powerline-status)
 
 installed_pip_packages="$($pip_cmd list 2>/dev/null | awk '{print $1}')"
