@@ -30,6 +30,8 @@ Plug 'vim-syntastic/syntastic'
 
 Plug 'jeetsukumaran/vim-indentwise'
 
+Plug 'PratikBhusal/vim-grip'
+
 " Builds YouCompleteMe {{{2
 function! BuildYCM(info)
     " info is a dictionary with 3 fields
