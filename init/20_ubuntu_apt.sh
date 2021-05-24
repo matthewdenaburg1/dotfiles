@@ -52,6 +52,7 @@ apt_packages+=(
     curl
     git
     googler             # google search from command line
+    grip
     html-xml-utils      # html/xml manipulation tools
     htop                # examine processes
     jq                  # command line json processor
