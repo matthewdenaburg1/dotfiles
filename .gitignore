@@ -13,6 +13,7 @@
 /link/.vim/bundle/
 # this is a symlink
 /link/.vim/autoload/plug.vim
+/link/.vim/undodir/
 
 /link/.vim/.netrwhist
 
