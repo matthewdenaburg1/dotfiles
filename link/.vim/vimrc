@@ -102,6 +102,9 @@ let maplocalleader = "."
     let &showbreak = '... '         " show '... ' on indented lines
 
     set belloff=all                 " turn alert bell off (src: https://stackoverflow.com/a/41524053/664950)
+
+    set undofile
+    set undodir=~/.vim/undodir/
 " }}}
 
 " mappings {{{1
