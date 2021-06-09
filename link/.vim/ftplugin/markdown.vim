@@ -5,3 +5,6 @@ setlocal spelllang=en_us
 
 " change the previous spelling error first suggestion
 inoremap <c-l> <c-g>u<esc>[s1z=`]a<c-g>u
+
+setlocal textwidth=80
+setlocal formatoptions=tqwan1
