@@ -89,7 +89,6 @@ let maplocalleader = "."
     set nowrap
 
     set foldcolumn=4
-    set foldminlines=4
 
     set shiftwidth=4
     set softtabstop=0
