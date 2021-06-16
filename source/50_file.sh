@@ -27,6 +27,7 @@ if [[ "$(type -P tree)" ]]; then
     alias ll='command tree --dirsfirst -apughDFiC -L 1'
     alias lsd='ll -d'
     alias mytree='command tree -C -a -I ".cache|.git*" -L 10 --filelimit 30'
+    alias tree='command tree -C -a -I ".cache|.git*"'
 else
     alias la='command ls -A'
     alias ll='command ls -Ahl'
@@ -36,6 +37,7 @@ fi
 # Easier navigation: .., ..., -
 alias ..='cd ..'
 alias ...='cd ../..'
+alias ....='cd ../../..'
 alias -- -='cd -'
 
 # File size
