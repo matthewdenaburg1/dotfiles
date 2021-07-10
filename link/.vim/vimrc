@@ -14,7 +14,7 @@ Plug 'tpope/vim-markdown'
 
 Plug 'matthewdenaburg1/my-vim-snippets'
 
-Plug 'vim-scripts/SQLComplete.vim'
+Plug 'vim-scripts/SQLComplete.vim', { 'for' : 'sql' }
 
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -75,7 +75,7 @@ filetype plugin indent on
 syntax enable
 
 colorscheme slate
-set background=dark
+" set background=dark
 
 let mapleader = ","
 let maplocalleader = "."
