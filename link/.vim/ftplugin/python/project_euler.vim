@@ -4,7 +4,7 @@
 setlocal noignorecase
 
 " make a brand new file given problem number
-function! New_project_euler(filename) " {{{
+function! New_project_euler(filename) abort " {{{
     let l:number0 = substitute(a:filename, "[^0-9]*", "", "")
     let l:number = substitute(l:number0, "^0*", "", "")
 

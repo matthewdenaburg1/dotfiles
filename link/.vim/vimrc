@@ -33,7 +33,7 @@ Plug 'jeetsukumaran/vim-indentwise'
 Plug 'PratikBhusal/vim-grip'
 
 " Builds YouCompleteMe {{{2
-function! BuildYCM(info)
+function! BuildYCM(info) abort
     " info is a dictionary with 3 fields
     " - name:   name of the plugin
     " - status: 'installed', 'updated', or 'unchanged'
