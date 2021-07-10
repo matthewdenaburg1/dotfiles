@@ -81,6 +81,10 @@ let mapleader = ","
 let maplocalleader = "."
 
 
+" `matchit.vim` is built-in so let's enable it!
+" Hit `%` on `if` to jump to `else`.
+runtime macros/matchit.vim
+
 " basic settings {{{
     set number
     set relativenumber
@@ -104,6 +108,18 @@ let maplocalleader = "."
 
     set undofile
     set undodir=~/.vim/undodir/
+
+    set path+=**                    " Search down into subfolders
+    set wildmenu                    " Display all matching files when we tab complete
+    set showmatch                   " show matching [{()}]
+
+    " Tweaks for browsing
+    let g:netrw_banner=0        " disable annoying banner
+    let g:netrw_browse_split=4  " open in prior window
+    let g:netrw_altv=1          " open splits to the right
+    let g:netrw_liststyle=3     " tree view
+    let g:netrw_list_hide=netrw_gitignore#Hide()
+    let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " }}}
 
 " mappings {{{1
